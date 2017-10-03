@@ -53,7 +53,7 @@ public class DataAccessConfig {
 
 		LocalSessionFactoryBean bean = new LocalSessionFactoryBean();
 		bean.setDataSource(dataSource());
-		bean.setPackagesToScan("element.bst.elementexploration");
+		bean.setPackagesToScan("com.coefficient.rest");
 		bean.setHibernateProperties(hibernateProperties());
 		return bean;
 	}
