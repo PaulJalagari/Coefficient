@@ -9,15 +9,15 @@ import org.slf4j.LoggerFactory;
  * 
  *
  */
-public class ElementLogger {
+public class CoefficientLogger {
 
 	// Protecting from initialization
-	private ElementLogger() {
+	private CoefficientLogger() {
 
 	}
 
 	// Level of logs
-	public enum ElementLoggerLevel {
+	public enum CoefficientLoggerLevel {
 		WARNING, INFO, DEBUG, ERROR
 	};
 
@@ -34,7 +34,7 @@ public class ElementLogger {
 	 *            Current class Object
 	 */
 	@SuppressWarnings("rawtypes")
-	public static void log(ElementLoggerLevel level, String msg, Class clazz) {
+	public static void log(CoefficientLoggerLevel level, String msg, Class clazz) {
 		logger = LoggerFactory.getLogger(clazz);
 		switch (level) {
 		case WARNING:
@@ -69,7 +69,7 @@ public class ElementLogger {
 	 * 
 	 */
 	@SuppressWarnings("rawtypes")
-	public static void log(ElementLoggerLevel level, String msg, Throwable t, Class clazz) {
+	public static void log(CoefficientLoggerLevel level, String msg, Throwable t, Class clazz) {
 		logger = LoggerFactory.getLogger(clazz);
 		switch (level) {
 		case WARNING:

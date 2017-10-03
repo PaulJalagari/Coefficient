@@ -15,7 +15,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import com.coefficient.rest.util.ElementLogger.ElementLoggerLevel;
+import com.coefficient.rest.util.CoefficientLogger.CoefficientLoggerLevel;
 
 /**
  * Helps in reading log file based on date
@@ -119,11 +119,12 @@ public class LoggerUtil {
 			}
 
 		} catch (FileNotFoundException e) {
-			ElementLogger.log(ElementLoggerLevel.ERROR, "File (logger) not found exception ", e, LoggerUtil.class);
+			CoefficientLogger.log(CoefficientLoggerLevel.ERROR, "File (logger) not found exception ", e,
+					LoggerUtil.class);
 			builder.setLength(0);
 			builder.append("Could not find log file");
 		} catch (IOException e) {
-			ElementLogger.log(ElementLoggerLevel.ERROR, "IOException for logger ", e, LoggerUtil.class);
+			CoefficientLogger.log(CoefficientLoggerLevel.ERROR, "IOException for logger ", e, LoggerUtil.class);
 			builder.setLength(0);
 			builder.append("Exception occured while reading file");
 		}
