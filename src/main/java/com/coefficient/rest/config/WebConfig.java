@@ -19,7 +19,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 
 
-@ComponentScan({"element.bst.elementexploration.rest"})
+@ComponentScan({"com.coefficient.rest"})
 @Configuration
 @EnableWebMvc
 @Import({DataAccessConfig.class
